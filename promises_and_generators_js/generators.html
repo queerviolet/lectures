@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+    <title>Iterators and Generators</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>    
+    <script src="iterators.js"></script>
+    <script src="generators.js"></script>
+    <style>
+      div {
+        background: gray; width: 100px; height: 100px; display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="red">Red</div>
+    <div id="green">Green</div>
+    <div id="blue">Blue</div>
+    <br>
+    <p><a onclick="callIterator();">callIterator();</a></p>
+    <p><a onclick="loopIterator();">loopIterator();</a></p>
+    <p><a onclick="generate();">generate();</a></p>
+    <p><a onclick="printEchoes();">printEchoes();</a></p>
+  </body>
+</html>
