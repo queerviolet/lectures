@@ -25,6 +25,8 @@ Promises also have catch method:
 
 This is equivalent to specifying onRejected in .then().
 
+Promises are implemented by RSVP.js, Q.js, and others: http://promisesaplus.com/implementations
+
 Here's the full spec: http://promisesaplus.com/
 
 */
@@ -139,8 +141,6 @@ Promise.all([loadImage(src1), loadImage(src2)])
 
 /*
 
-Hey, that looks useful! If we had loadImage, we could make our slideshow
-prettier.
 
 To implement our own Promises, we need to call the Promise constructor:
 
@@ -151,14 +151,7 @@ the request. */
 
 function loadImage(src) {
 	return new Promise(function(fulfill, reject) {
-		var img = new Image;
-		img.addEventListener('load', function() {
-			fulfill(img);
-		}, false);
-		img.addEventListener('error', function(e) {
-			reject(Error(e.message));
-		}, false);
-		img.src = src;
+		// TODO
 	});
 }
 
